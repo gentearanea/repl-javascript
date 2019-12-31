@@ -1,3 +1,16 @@
+var a = {"aaa" : 10};
+var b = a; //{"aaa" : 10}
+a.aaa = 5;
+alert(a.aaa);
+alert(b.aaa);
+
+
+
+
+
+
+
+
 // console.log(teddy)
 // console.log(say1)
 // console.log(say2())
@@ -180,3 +193,10 @@
 // console.log(NaN === NaN)
 // Object.is(NaN, NaN)
 
+
+// function aaa(){
+//   alert("test");
+// }
+// //aaa();
+
+// alert(aaa);
