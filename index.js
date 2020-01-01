@@ -1,8 +1,31 @@
-var a = {"aaa" : 10};
-var b = a; //{"aaa" : 10}
-a.aaa = 5;
-alert(a.aaa);
-alert(b.aaa);
+//プロトタイプ
+// function multiplyBy5(num) {
+//   return num*5
+// }
+
+// multiplyBy5.__proto__
+// Function.prototype
+// multiplyBy5.__proto__.__proto__
+// Object.prototype
+// multiplyBy5.__proto__.__proto__.__proto__
+// typeof Object
+// typeof {}
+
+// オブジェクトのプロパティを確認
+const obj = {name: "hey"}
+//obj.hasOwnProperty("name")
+function a() {}
+a.hasOwnProperty("name")
+a.name
+
+
+
+
+// var a = {"aaa" : 10};
+// var b = a; //{"aaa" : 10}
+// a.aaa = 5;
+// alert(a.aaa);
+// alert(b.aaa);
 
 
 
