@@ -1,3 +1,25 @@
+function Elf(name, weapon) {
+  console.log('start===',this)
+  this.name = name;
+  this.weapon = weapon;
+  var a = 10;
+  console.log('end===',this)
+}
+
+Elf.prototype.attack = function() {
+  return this.name + ' attack with ' + this.weapon;
+}
+
+//thisが呼び出したスコープに制限される
+// Elf.prototype.attack = () => {
+//   return this.name + ' attack with ' + this.weapon;
+// }
+
+const elf1 = new Elf('cris', 'hammer')
+console.log(elf1.attack())
+
+
+
 //プロトタイプ
 // function multiplyBy5(num) {
 //   return num*5
@@ -12,11 +34,11 @@
 // typeof {}
 
 // オブジェクトのプロパティを確認
-const obj = {name: "hey"}
-//obj.hasOwnProperty("name")
-function a() {}
-a.hasOwnProperty("name")
-a.name
+// const obj = {name: "hey"}
+// //obj.hasOwnProperty("name")
+// function a() {}
+// a.hasOwnProperty("name")
+// a.name
 
 
 
