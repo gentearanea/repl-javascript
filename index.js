@@ -1,24 +1,43 @@
-function Elf(name, weapon) {
-  console.log('start===',this)
-  this.name = name;
-  this.weapon = weapon;
-  var a = 10;
-  console.log('end===',this)
-}
 
-Elf.prototype.attack = function() {
-  return this.name + ' attack with ' + this.weapon;
-}
 
-//thisが呼び出したスコープに制限される
-// Elf.prototype.attack = () => {
+// compose(fn1, fn2, fn3)(50) //Right to lext
+// pipe(fn3, fn2, fn1)(50)//left to right
+
+// const compose = (f, g) => (a) => f(g(a))
+// const pipe = (f, g) => (a) => g(f(a))
+// const multiplyBy3AndAbsolute = compose((num) => num*3, Math.abs)
+// console.log(multiplyBy3AndAbsolute(-50))
+
+
+
+
+// function Elf(name, weapon) {
+//   this.name = name;
+//   this.weapon = weapon;
+// }
+
+// Elf.prototype.attack = function() {
 //   return this.name + ' attack with ' + this.weapon;
 // }
 
-const elf1 = new Elf('cris', 'hammer')
-console.log(elf1.attack())
+// Elf.prototype.build = function() {
+//   function building() {
+//     console.log('this',this)
+//     return this.name + ' build a house ';
+//   }
+// }
+// //thisが呼び出したスコープに制限される
+// // Elf.prototype.attack = () => {
+// //   return this.name + ' attack with ' + this.weapon;
+// // }
 
+// const elf1 = new Elf('cris', 'hammer')
+// console.log(elf1.attack())
+// console.log(elf1.build())
 
+//Elfオブジェクトのprototypeプロパティ
+// console.log(elf1.__proto__)
+// console.log(Elf.prototype)
 
 //プロトタイプ
 // function multiplyBy5(num) {
